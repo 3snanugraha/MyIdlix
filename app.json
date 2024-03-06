@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "MyIdlix",
+    "name": "My Idlix",
     "slug": "MyIdlix",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/idlix.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/idlix.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,12 +19,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/idlix.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.myidlix.tris"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/idlix.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7d675f2a-0add-4e19-901c-4538418298c5"
+      }
     }
   }
 }
