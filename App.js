@@ -74,20 +74,22 @@ const BlockedWebView = () => {
   return (
     <View style={{ flex: 1 }}>
       <StatusBar backgroundColor="red" barStyle="light-content" />
-      <WebView
+      <WebView 
         ref={webViewRef}
         source={{ uri: 'https://tv.idlixofficial.co/' }}
         javaScriptEnabled={true}
         domStorageEnabled={true}
+        cacheEnabled={true} // Aktifkan caching konten
+        decelerationRate={'normal'} // Atur kecepatan gulir
         onLoad={handleBlockPopupsAndElements}
         onNavigationStateChange={handleNavigationStateChange}
-        onShouldStartLoadWithRequest={handleShouldStartLoadWithRequest} // Add this line
+        onShouldStartLoadWithRequest={handleShouldStartLoadWithRequest}
         useWebKit={true}
         allowsFullscreenVideo={true}
       />
       <View style={styles.floatingButtonContainer}>
         <TouchableOpacity style={[styles.button, { opacity: 0.8 }]} onPress={handleGoHome}>
-          <Icon name="home" size={20} color="#fff" />
+          <Icon name="arrow-left" size={20} color="#fff" />
         </TouchableOpacity>
         <TouchableOpacity style={[styles.button, { opacity: 0.8 }]} onPress={handleReload}>
           <Icon name="refresh" size={20} color="#fff" />
